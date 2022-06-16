@@ -5,8 +5,11 @@ pipeline {
   stages {
     stage("Build"){
       steps{
-        echo "Building application"
-      }         
+        withMaven()
+        {
+       sh '/.mvn -verion'
+      }     
+         echo "Building application"
     } 
      stage("Test"){
       steps{
