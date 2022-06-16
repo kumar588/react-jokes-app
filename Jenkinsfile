@@ -5,10 +5,9 @@ pipeline {
   stages {
 	stage('Build') { 
 		    steps {
-			    withMaven(){
-				    sh 'mvn -B -DskipTests clean package' 
-			    }
-			
+			    withMaven(maven: 'mvn') {
+            sh "mvn clean package"
+        }
 		    }
 		}
      stage("Test"){
