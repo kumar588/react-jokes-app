@@ -2,7 +2,7 @@ pipeline {
 
   agent any
   
-  stages {
+  stages {]
     stage("Build"){
       steps{
         withMaven()
@@ -11,10 +11,11 @@ pipeline {
       }     
          echo "Building application using maven"
     } 
+	}
      stage("Test"){
       steps{
         echo "Runing test cases"
-      }         
+        }         
     }
     stage("Deploy"){
       steps{
