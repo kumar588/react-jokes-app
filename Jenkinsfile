@@ -9,7 +9,7 @@ pipeline {
         {
        sh '/.mvn -verion'
       }     
-         echo "Building application"
+         echo "Building application using maven"
     } 
      stage("Test"){
       steps{
