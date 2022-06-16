@@ -6,7 +6,7 @@ pipeline {
     stage("Build"){
       steps{
        
-          sh 'maven --verion'
+          sh '/.mvn --verion'
 	     
          echo "Building application using maven"
 		}
